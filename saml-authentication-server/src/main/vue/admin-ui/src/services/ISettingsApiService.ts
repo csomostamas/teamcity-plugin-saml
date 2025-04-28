@@ -44,6 +44,7 @@ export interface SamlSettings {
     limitToPostfixes?: boolean;
     allowedPostfixes?: string;
 
+    usernameAttributeMapping?: SamlAttributeMapping;
     emailAttributeMapping?: SamlAttributeMapping;
     nameAttributeMapping?: SamlAttributeMapping;
     vcsUsernameAttributeMapping?: SamlAttributeMapping;

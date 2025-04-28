@@ -134,7 +134,10 @@ public class SamlAuthenticationScheme extends HttpAuthenticationSchemeAdapter {
                 return sendUnauthorizedRequest(request, response, "SAML request is not authenticated due to errors: " + String.join(", ", auth.getErrors()));
             }
 
-            String username = auth.getNameId();
+            String username = getAttribute(auth, settings.getUsernameAttributeMapping());
+            if(StringUtils.isEmpty(username)) {
+                username = auth.getNameId();
+            }
 
             SUser user = null;
 

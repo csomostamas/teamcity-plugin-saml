@@ -41,6 +41,7 @@ public class SamlPluginSettings {
     private boolean strict = true;
     private boolean samlCorsFilter = true;
 
+    SamlAttributeMappingSettings usernameAttributeMapping = new SamlAttributeMappingSettings();
     SamlAttributeMappingSettings emailAttributeMapping = new SamlAttributeMappingSettings();
     SamlAttributeMappingSettings nameAttributeMapping = new SamlAttributeMappingSettings();
     SamlAttributeMappingSettings groupsAttributeMapping = new SamlAttributeMappingSettings();

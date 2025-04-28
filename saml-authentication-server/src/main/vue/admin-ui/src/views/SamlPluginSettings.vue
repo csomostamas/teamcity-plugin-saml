@@ -98,6 +98,12 @@
       </RunnerFormRow>
 
       <RunnerFormRow v-if="settings.createUsersAutomatically">
+        <template v-slot:label>Map Username From</template>
+        <template v-slot:content>
+          <SamlAttributeSelect v-model="settings.usernameAttributeMapping"/>
+        </template>
+      </RunnerFormRow>
+      <RunnerFormRow v-if="settings.createUsersAutomatically">
         <template v-slot:label>Map E-mail From</template>
         <template v-slot:content>
           <SamlAttributeSelect v-model="settings.emailAttributeMapping"/>
