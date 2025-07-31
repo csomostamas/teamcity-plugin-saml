@@ -1,0 +1,1 @@
+docker build -t plugin-builder . && docker run --rm -ti -v $PWD:$PWD -w $PWD plugin-builder mvn -Dmaven.repo.local=.m2 package 
